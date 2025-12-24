@@ -1,0 +1,1140 @@
+/**
+ * Flexoki Light Theme for Typora
+ * Based on Flexoki color palette by Steph Ango (https://stephango.com/flexoki)
+ * 
+ * A warm, inky color scheme inspired by analog inks and paper
+ * Designed for reading and writing on digital screens
+ */
+
+:root {
+  /* ============================================ */
+  /* FLEXOKI COLOR PALETTE - LIGHT MODE         */
+  /* ============================================ */
+  
+  /* Base Colors */
+  --flexoki-black: #100F0F;
+  --flexoki-paper: #FFFCF0;
+  --flexoki-50: #F2F0E5;
+  --flexoki-100: #E6E4D9;
+  --flexoki-150: #DAD8CE;
+  --flexoki-200: #CECDC3;
+  --flexoki-300: #B7B5AC;
+  --flexoki-600: #6F6E69;
+  --flexoki-700: #575653;
+  --flexoki-800: #403E3C;
+  --flexoki-850: #343331;
+  --flexoki-900: #282726;
+  --flexoki-950: #1C1B1A;
+  
+  /* Accent Colors - Light Mode uses 600 variants */
+  --flexoki-red: #AF3029;
+  --flexoki-orange: #BC5215;
+  --flexoki-yellow: #AD8301;
+  --flexoki-green: #66800B;
+  --flexoki-cyan: #24837B;
+  --flexoki-blue: #205EA6;
+  --flexoki-purple: #5E409D;
+  --flexoki-magenta: #A02F6F;
+  
+  /* Secondary Accent Colors (400 variants for highlights) */
+  --flexoki-red-light: #D14D41;
+  --flexoki-orange-light: #DA702C;
+  --flexoki-yellow-light: #D0A215;
+  --flexoki-green-light: #879A39;
+  --flexoki-cyan-light: #3AA99F;
+  --flexoki-blue-light: #4385BE;
+  --flexoki-purple-light: #8B7EC8;
+  --flexoki-magenta-light: #CE5D97;
+  
+  /* ============================================ */
+  /* TYPORA THEME VARIABLES                      */
+  /* ============================================ */
+  
+  /* Background Colors */
+  --bg-color: var(--flexoki-paper);
+  --bg-color1: var(--flexoki-paper);
+  --bg-color2: var(--flexoki-50);
+  --bg-color3: var(--flexoki-100);
+  --bg-color4: var(--flexoki-850);
+  --bg-color5: var(--flexoki-50);
+  
+  /* Text Colors */
+  --text-color: var(--flexoki-black);
+  --text-color1: var(--flexoki-black);
+  --text-color2: var(--flexoki-600);
+  --text-color3: var(--flexoki-300);
+  --text-color4: var(--flexoki-paper);
+  --text-color5: var(--flexoki-600);
+  
+  /* UI Colors */
+  --link-color: var(--flexoki-cyan);
+  --primary-color: var(--flexoki-cyan);
+  --primary-btn-border-color: var(--flexoki-200);
+  --primary-btn-text-color: var(--flexoki-black);
+  
+  /* Border Colors */
+  --window-border: 1px solid var(--flexoki-100);
+  --table-border-color: var(--flexoki-200);
+  --table-thead-color: transparent;
+  --table-bg-color: transparent;
+  --table-bg-darker-color: transparent;
+  
+  /* Hover Colors */
+  --hover-bg-color1: var(--flexoki-100);
+  --hover-bg-color2: var(--flexoki-150);
+  --hover-bg-color3: var(--flexoki-200);
+  --hover-text-color: var(--flexoki-black);
+  
+  /* Active Colors */
+  --active-color: var(--flexoki-200);
+  --active-file-bg-color: var(--flexoki-100);
+  --active-file-text-color: var(--flexoki-black);
+  --active-file-border-color: var(--flexoki-cyan);
+  
+  /* Input Colors */
+  --input-color: var(--flexoki-paper);
+  --select-color: var(--flexoki-100);
+  --button-color: var(--flexoki-100);
+  
+  /* Divider Colors */
+  --menu-divider-color: var(--flexoki-200);
+  --node-border: var(--flexoki-200);
+  --node-fill: var(--flexoki-50);
+  
+  /* Scrollbar Colors */
+  --scrollbar-thumb-color: var(--flexoki-300);
+  --scrollbar-track-color: transparent;
+  
+  /* Sidebar Colors */
+  --side-bar-bg-color: var(--flexoki-50);
+  --control-text-color: var(--flexoki-black);
+  --control-text-hover-color: var(--flexoki-black);
+  --item-hover-bg-color: var(--flexoki-100);
+  --item-hover-text-color: var(--flexoki-black);
+  
+  /* Focus Colors */
+  --focus-color: var(--flexoki-cyan);
+  --focus-ring-color: var(--flexoki-cyan-light);
+  --blur-text-color: var(--flexoki-300);
+  
+  /* Code Block Colors */
+  --code-bg-color: var(--flexoki-50);
+  --code-red-color: var(--flexoki-red);
+  --code-orange-color: var(--flexoki-orange);
+  --code-yellow-color: var(--flexoki-yellow);
+  --code-green-color: var(--flexoki-green);
+  --code-cyan-color: var(--flexoki-cyan);
+  --code-blue-color: var(--flexoki-blue);
+  --code-purple-color: var(--flexoki-purple);
+  --code-magenta-color: var(--flexoki-magenta);
+  --code-grey-color: var(--flexoki-300);
+  --code-select-bg-color: var(--flexoki-200);
+  --code-cursor-color: var(--flexoki-cyan);
+  
+  /* Selection Colors */
+  --select-text-bg-color: var(--flexoki-200);
+  --search-select-bg-color: var(--flexoki-yellow-light);
+  
+  /* Misc Colors */
+  --rawblock-edit-panel-bd: var(--flexoki-50);
+  --theme-select-color: var(--flexoki-cyan-light);
+  
+  /* ============================================ */
+  /* TYPOGRAPHY                                  */
+  /* ============================================ */
+  
+  --sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "system-ui", sans-serif;
+  --monospace: "JetBrainsMono Nerd Font", "JetBrains Mono", "Fira Code", Consolas, "Courier New", monospace;
+}
+
+/* ============================================ */
+/* BASE STYLES                                 */
+/* ============================================ */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--sans-serif);
+  color: var(--text-color1);
+  background: var(--bg-color1);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#write {
+  max-width: 860px;
+  padding: 40px 60px;
+  font-size: 1rem;
+  color: var(--text-color1);
+  line-height: 1.7;
+}
+
+/* ============================================ */
+/* TEXT SELECTION                              */
+/* ============================================ */
+
+::selection {
+  background-color: var(--select-text-bg-color);
+}
+
+.in-text-selection {
+  background-color: var(--select-text-bg-color);
+}
+
+/* ============================================ */
+/* HEADINGS                                    */
+/* ============================================ */
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--flexoki-black);
+  font-family: var(--sans-serif);
+}
+
+#write h1 {
+  font-size: 2.25rem;
+  margin-top: 2rem;
+  padding-bottom: 0.3rem;
+}
+
+#write h2 {
+  font-size: 1.875rem;
+  margin-top: 1.75rem;
+}
+
+#write h3 {
+  font-size: 1.5rem;
+}
+
+#write h4 {
+  font-size: 1.25rem;
+}
+
+#write h5 {
+  font-size: 1.125rem;
+}
+
+#write h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ============================================ */
+/* PARAGRAPHS                                  */
+/* ============================================ */
+
+#write p {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ============================================ */
+/* LINKS                                       */
+/* ============================================ */
+
+#write a:not([role="menuitem"]) {
+  color: var(--link-color);
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+#write a:not([role="menuitem"]):hover {
+  color: var(--flexoki-cyan-light);
+  text-decoration: underline;
+}
+
+/* ============================================ */
+/* EMPHASIS AND STRONG                         */
+/* ============================================ */
+
+#write strong {
+  font-weight: 700;
+  color: var(--text-color1);
+}
+
+#write em {
+  font-style: italic;
+  color: var(--text-color1);
+}
+
+/* ============================================ */
+/* LISTS                                       */
+/* ============================================ */
+
+#write ul,
+#write ol {
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#write ul li,
+#write ol li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+#write ul li::marker {
+  color: var(--flexoki-300);
+}
+
+#write ol li::marker {
+  color: var(--flexoki-300);
+  font-weight: 600;
+}
+
+/* Task Lists */
+.md-task-list-item > input {
+  margin-left: -1.5em;
+  margin-right: 0.3em;
+  transform: translateY(-0.1em);
+}
+
+/* Strikethrough for completed tasks */
+.md-task-list-item.task-list-done {
+  text-decoration: line-through;
+  color: var(--flexoki-600);
+  opacity: 0.7;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Checkbox unchecked */
+input[type="checkbox"]:not(:checked):before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  border: 2px solid var(--flexoki-300);
+  border-radius: 3px;
+  background-color: var(--bg-color1);
+}
+
+/* Checkbox hover (unchecked) */
+input[type="checkbox"]:not(:checked):hover:before {
+  border-color: var(--flexoki-cyan);
+  background-color: var(--flexoki-50);
+}
+
+/* Checkbox checked */
+input[type="checkbox"]:checked:before {
+  content: "✓";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 2px solid var(--flexoki-cyan);
+  border-radius: 3px;
+  background-color: var(--flexoki-cyan);
+  color: var(--flexoki-paper);
+}
+
+/* Checkbox checked hover */
+input[type="checkbox"]:checked:hover:before {
+  background-color: var(--flexoki-cyan);
+  border-color: var(--flexoki-cyan);
+  opacity: 0.8;
+}
+
+/* ============================================ */
+/* BLOCKQUOTES                                 */
+/* ============================================ */
+
+#write blockquote {
+  margin: 0.25rem 0;
+  padding: 0.25rem 1rem;
+  border-left: 2px solid var(--flexoki-cyan);
+  background-color: transparent;
+  color: var(--text-color1);
+}
+
+#write blockquote p {
+  margin: 0.5rem 0;
+}
+
+#write blockquote blockquote {
+  padding-right: 0;
+}
+
+/* ============================================ */
+/* HORIZONTAL RULE                             */
+/* ============================================ */
+
+#write hr {
+  height: 2px;
+  margin: 2rem 0;
+  background-color: var(--flexoki-200);
+  border: 0;
+  border-radius: 1px;
+}
+
+/* ============================================ */
+/* CODE - INLINE                               */
+/* ============================================ */
+
+#write code {
+  font-family: var(--monospace);
+  font-size: 0.9em;
+  padding: 2px 6px;
+  margin: 0 2px;
+  background-color: var(--code-bg-color);
+  color: var(--flexoki-black);
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(16, 15, 15, 0.06);
+}
+
+/* ============================================ */
+/* CODE - BLOCKS                               */
+/* ============================================ */
+
+#write .md-fences,
+#write .md-fences:active {
+  font-family: var(--monospace);
+  font-size: 0.9rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: var(--code-bg-color);
+  color: var(--flexoki-black);
+  border: 1px solid var(--flexoki-100);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(16, 15, 15, 0.08);
+  line-height: 1.5;
+}
+
+.md-fences .code-tooltip {
+  background-color: var(--bg-color5);
+  border-radius: 4px;
+  transition: 0.2s ease;
+}
+
+.CodeMirror-lines {
+  padding-left: 4px;
+}
+
+.CodeMirror,
+.CodeMirror-code {
+  color: var(--flexoki-black);
+}
+
+/* Code Selection */
+.CodeMirror-selected,
+.CodeMirror-selectedtext {
+  background: var(--code-select-bg-color) !important;
+}
+
+/* Code Cursor */
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 2px solid var(--code-cursor-color);
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+  border-left: 2px solid var(--code-cursor-color);
+}
+
+.CodeMirror-gutters {
+  border-right: none;
+  background-color: transparent;
+}
+
+/* ============================================ */
+/* SYNTAX HIGHLIGHTING - CODE BLOCKS           */
+/* ============================================ */
+
+/* Keywords (green) - per Flexoki guidelines */
+.cm-s-inner .cm-keyword,
+.cm-s-typora-default .cm-keyword {
+  color: var(--code-green-color) !important;
+}
+
+/* Strings (cyan) */
+.cm-s-inner .cm-string,
+.cm-s-typora-default .cm-string {
+  color: var(--code-cyan-color) !important;
+}
+
+/* Functions (orange) */
+.cm-s-inner .cm-def,
+.cm-s-inner .cm-attribute {
+  color: var(--code-orange-color) !important;
+}
+
+/* Numbers (purple) */
+.cm-s-inner .cm-number,
+.cm-s-typora-default .cm-number {
+  color: var(--code-purple-color) !important;
+}
+
+/* Comments (gray) */
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment,
+.cm-s-typora-default .cm-comment {
+  color: var(--code-grey-color) !important;
+  font-style: italic;
+}
+
+/* Variables (blue) */
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-property,
+.cm-s-typora-default .cm-property {
+  color: var(--code-blue-color) !important;
+}
+
+/* Operators and punctuation (muted text - tx-2) */
+.cm-s-inner .cm-operator {
+  color: var(--flexoki-600) !important;
+}
+
+/* Tags (red) */
+.cm-s-inner .cm-tag {
+  color: var(--code-red-color) !important;
+}
+
+/* Constants/Atoms (yellow) */
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+  color: var(--code-yellow-color) !important;
+}
+
+/* Brackets */
+.cm-s-inner .cm-bracket {
+  color: var(--text-color1) !important;
+}
+
+/* Built-ins */
+.cm-s-inner .cm-builtin {
+  color: var(--code-cyan-color) !important;
+}
+
+/* Meta */
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+  color: var(--code-orange-color) !important;
+}
+
+/* Headers in code */
+.cm-s-inner .cm-header,
+.cm-s-typora-default .cm-header {
+  color: var(--code-blue-color) !important;
+  font-weight: 700;
+}
+
+/* Links in code */
+.cm-s-inner .cm-link,
+.cm-s-typora-default .cm-link {
+  color: var(--code-blue-color) !important;
+}
+
+/* Variable-2 and Variable-3 */
+.cm-s-inner .cm-variable-2 {
+  color: var(--code-yellow-color) !important;
+}
+
+.cm-s-inner .cm-variable-3 {
+  color: var(--code-purple-color) !important;
+}
+
+/* Active line in source mode */
+.cm-s-typora-default .CodeMirror-activeline-background {
+  background: var(--hover-bg-color1);
+}
+
+/* Markdown specific in source mode */
+.cm-s-typora-default .cm-strong,
+.cm-s-typora-default .cm-em,
+.cm-s-typora-default .cm-del {
+  color: var(--code-orange-color) !important;
+}
+
+.cm-s-typora-default .cm-code {
+  color: var(--code-purple-color) !important;
+}
+
+.cm-s-typora-default .cm-quote {
+  color: var(--code-green-color) !important;
+}
+
+/* String-2 (alternative strings) */
+.cm-s-inner .cm-string-2 {
+  color: var(--code-cyan-color) !important;
+}
+
+/* Quote in code */
+.cm-s-inner .cm-quote {
+  color: var(--code-green-color) !important;
+}
+
+/* HR in markdown source */
+.cm-s-inner .cm-hr {
+  color: var(--flexoki-200) !important;
+}
+
+/* Positive/Negative (diff) */
+.cm-s-inner .cm-positive {
+  color: var(--code-green-color) !important;
+}
+
+.cm-s-inner .cm-negative {
+  color: var(--code-red-color) !important;
+}
+
+/* Formatting task (markdown checkboxes) */
+.cm-formatting-task {
+  color: var(--flexoki-cyan) !important;
+}
+
+/* Import/Export/Include statements (red - per Flexoki official spec) */
+.cm-s-inner .cm-import,
+.cm-s-inner .cm-include,
+.cm-s-typora-default .cm-import,
+.cm-s-typora-default .cm-include {
+  color: var(--code-red-color) !important;
+}
+
+/* Booleans (magenta - per Flexoki official spec) */
+.cm-s-inner .cm-boolean,
+.cm-s-typora-default .cm-boolean {
+  color: var(--code-magenta-color) !important;
+}
+
+/* ============================================ */
+/* TABLES                                      */
+/* ============================================ */
+
+#write table {
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.md-table-fig,
+.md-table-fig:active {
+  margin: 1.5rem 0;
+}
+
+#write table thead {
+  background-color: transparent;
+}
+
+#write table thead tr th {
+  font-weight: 700;
+  color: var(--text-color1);
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--table-border-color);
+}
+
+#write table tbody tr {
+  border-top: 1px solid var(--table-border-color);
+}
+
+#write table tbody tr:nth-child(2n) {
+  background-color: transparent;
+}
+
+#write table tbody tr:nth-child(2n + 1) {
+  background-color: transparent;
+}
+
+#write table tbody tr td {
+  padding: 0.625rem 1rem;
+  border: 1px solid var(--table-border-color);
+  text-align: left;
+}
+
+#write table tr th:first-child,
+#write table tr td:first-child {
+  border-left-width: 0;
+}
+
+#write table tr th:last-child,
+#write table tr td:last-child {
+  border-right-width: 0;
+}
+
+/* Table Edit Panel */
+.ty-table-edit {
+  background-color: var(--bg-color3);
+  border: 0;
+  border-radius: 4px;
+  padding: 4px 8px;
+  box-shadow: 0 2px 8px rgba(16, 15, 15, 0.12);
+}
+
+.ty-table-edit button {
+  background-color: transparent;
+  color: var(--text-color2);
+  border: 0;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.ty-table-edit button:hover {
+  background-color: var(--hover-bg-color2);
+  color: var(--hover-text-color);
+}
+
+/* ============================================ */
+/* IMAGES                                      */
+/* ============================================ */
+
+#write img {
+  max-width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(16, 15, 15, 0.1);
+}
+
+.md-image > .md-meta {
+  border: 0;
+  padding: 4px 0;
+  font-size: 0.875rem;
+  color: var(--text-color2);
+}
+
+/* ============================================ */
+/* FOOTNOTES                                   */
+/* ============================================ */
+
+sup.md-footnote {
+  color: var(--flexoki-cyan);
+  background-color: transparent;
+  padding: 0 2px;
+}
+
+/* ============================================ */
+/* SIDEBAR                                     */
+/* ============================================ */
+
+#typora-sidebar {
+  background-color: var(--side-bar-bg-color);
+  border-right: 1px solid var(--flexoki-100);
+  box-shadow: 2px 0 8px rgba(16, 15, 15, 0.04);
+}
+
+.sidebar-menu {
+  color: var(--control-text-color);
+}
+
+/* File Items */
+.file-list-item {
+  border-bottom: 0;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.file-list-item:hover {
+  background-color: var(--item-hover-bg-color);
+  border-left-color: var(--flexoki-cyan-light);
+}
+
+.file-list-item.active {
+  background-color: var(--active-file-bg-color);
+  border-left-color: var(--active-file-border-color);
+  color: var(--active-file-text-color);
+}
+
+.file-list-item-file-ext-part {
+  opacity: 0.7;
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+  border-top: 1px solid var(--menu-divider-color);
+  box-shadow: 0 -2px 8px rgba(16, 15, 15, 0.04);
+}
+
+/* ============================================ */
+/* SEARCH PANEL                                */
+/* ============================================ */
+
+#md-searchpanel {
+  background-color: var(--side-bar-bg-color);
+  border: 1px solid var(--flexoki-100);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(16, 15, 15, 0.15);
+}
+
+#md-searchpanel input {
+  background-color: var(--input-color);
+  border: 1px solid var(--flexoki-200);
+  border-radius: 4px;
+  color: var(--text-color1);
+}
+
+#md-searchpanel input:focus {
+  outline: none;
+  border-color: var(--focus-color);
+  box-shadow: 0 0 0 3px var(--flexoki-blue-light);
+  opacity: 0.2;
+}
+
+#md-searchpanel .btn:hover {
+  background-color: var(--hover-bg-color1);
+  color: var(--hover-text-color);
+}
+
+.md-search-hit {
+  background-color: var(--search-select-bg-color);
+  border-radius: 2px;
+}
+
+.md-search-select {
+  border: 2px solid var(--flexoki-cyan);
+  border-radius: 2px;
+}
+
+/* ============================================ */
+/* FOOTER                                      */
+/* ============================================ */
+
+footer.ty-footer {
+  border-top: 1px solid var(--menu-divider-color);
+  background-color: var(--side-bar-bg-color);
+  box-shadow: 0 -1px 4px rgba(16, 15, 15, 0.04);
+}
+
+.footer-item {
+  color: var(--text-color2);
+  transition: all 0.2s ease;
+}
+
+.footer-item:hover {
+  background-color: var(--hover-bg-color1);
+  color: var(--hover-text-color);
+}
+
+/* ============================================ */
+/* BUTTONS AND INPUTS                          */
+/* ============================================ */
+
+button,
+.btn {
+  border: 0;
+  background-color: var(--button-color);
+  color: var(--text-color1);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(16, 15, 15, 0.08);
+}
+
+button:hover,
+.btn:hover {
+  background-color: var(--hover-bg-color2);
+  box-shadow: 0 2px 6px rgba(16, 15, 15, 0.12);
+}
+
+input,
+select {
+  background-color: var(--input-color);
+  border: 1px solid var(--flexoki-200);
+  border-radius: 4px;
+  color: var(--text-color1);
+  padding: 0.5rem 0.75rem;
+  transition: all 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--focus-color);
+  box-shadow: 0 0 0 3px rgba(32, 94, 166, 0.1);
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 3px;
+}
+
+/* ============================================ */
+/* SCROLLBAR                                   */
+/* ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: var(--scrollbar-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--flexoki-600);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-color);
+}
+
+/* ============================================ */
+/* FOCUS MODE                                  */
+/* ============================================ */
+
+.on-focus-mode #write > :not(.md-focus):not(.md-focus-container) {
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.on-focus-mode #write .md-focus,
+.on-focus-mode #write .md-focus-container {
+  opacity: 1;
+}
+
+.on-focus-mode #write img,
+.on-focus-mode #write svg {
+  opacity: 0.7;
+}
+
+/* ============================================ */
+/* SOURCE CODE MODE                            */
+/* ============================================ */
+
+.typora-sourceview-on #toggle-sourceview-btn {
+  background-color: var(--active-file-bg-color);
+}
+
+#typora-source {
+  font-family: var(--monospace);
+  background-color: var(--bg-color1);
+  color: var(--text-color1);
+}
+
+#typora-source .CodeMirror-lines {
+  max-width: 860px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+/* ============================================ */
+/* TOOLTIPS                                    */
+/* ============================================ */
+
+#ty-tooltip {
+  background-color: var(--flexoki-850);
+  color: var(--flexoki-paper);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 0.875rem;
+  box-shadow: 0 2px 8px rgba(16, 15, 15, 0.2);
+}
+
+/* ============================================ */
+/* CONTEXT MENU                                */
+/* ============================================ */
+
+.dropdown-menu {
+  background-color: var(--bg-color2);
+  border: 1px solid var(--flexoki-100);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(16, 15, 15, 0.15);
+}
+
+.dropdown-menu .divider {
+  border-top: 1px solid var(--menu-divider-color);
+}
+
+.dropdown-menu > li > a {
+  color: var(--text-color1);
+  transition: all 0.2s ease;
+}
+
+.dropdown-menu > li > a:hover {
+  background-color: var(--hover-bg-color1);
+  color: var(--hover-text-color);
+}
+
+/* ============================================ */
+/* MODALS AND DIALOGS                          */
+/* ============================================ */
+
+.modal-content {
+  background-color: var(--bg-color1);
+  border: 1px solid var(--flexoki-100);
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(16, 15, 15, 0.2);
+}
+
+.modal-backdrop {
+  background-color: var(--flexoki-black);
+  opacity: 0.3 !important;
+}
+
+/* ============================================ */
+/* PRINT STYLES                                */
+/* ============================================ */
+
+@media print {
+  html,
+  body,
+  #write {
+    background: white;
+    color: black;
+  }
+  
+  #write {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  #write h1,
+  #write h2,
+  #write h3,
+  #write h4,
+  #write h5,
+  #write h6 {
+    color: black;
+    page-break-after: avoid;
+  }
+  
+  #write p,
+  #write blockquote,
+  #write table {
+    page-break-inside: avoid;
+  }
+  
+  #write img {
+    box-shadow: none;
+  }
+  
+  #write a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  #write code,
+  #write .md-fences {
+    background-color: #f5f5f5;
+    box-shadow: none;
+  }
+  
+  /* Remove UI elements */
+  .typora-export * {
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+/* ============================================ */
+/* MERMAID DIAGRAMS                            */
+/* ============================================ */
+
+.md-diagram-panel-preview {
+  background-color: var(--bg-color1);
+}
+
+/* Mermaid Flowchart */
+.node rect,
+.node circle,
+.node ellipse,
+.node polygon {
+  fill: var(--bg-color2);
+  stroke: var(--flexoki-cyan);
+  stroke-width: 2px;
+}
+
+.edgePath .path {
+  stroke: var(--flexoki-600);
+  stroke-width: 2px;
+}
+
+.label {
+  color: var(--text-color1);
+}
+
+/* ============================================ */
+/* MISC FIXES AND ADJUSTMENTS                  */
+/* ============================================ */
+
+/* Remove outline on focus for specific elements */
+.md-toc:focus .md-toc-content {
+  outline: none;
+}
+
+/* TOC */
+.md-toc {
+  background-color: var(--bg-color5);
+  border: 1px solid var(--flexoki-100);
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(16, 15, 15, 0.08);
+}
+
+.md-toc-item {
+  color: var(--text-color1);
+}
+
+.md-toc-item:hover {
+  color: var(--flexoki-cyan);
+  text-decoration: none;
+}
+
+/* YAML Front Matter */
+pre.md-meta-block {
+  background-color: var(--code-bg-color);
+  border: 1px solid var(--flexoki-100);
+  border-radius: 4px;
+  padding: 1rem;
+  font-family: var(--monospace);
+  font-size: 0.875rem;
+  color: var(--text-color2);
+  box-shadow: 0 1px 3px rgba(16, 15, 15, 0.08);
+}
+
+/* Megamenu */
+.megamenu-content,
+.megamenu-opened header {
+  background: var(--bg-color1);
+}
+
+.megamenu-menu {
+  background-color: var(--side-bar-bg-color);
+  border-right: 1px solid var(--flexoki-100);
+}
+
+/* Preferences Panel */
+.window-header {
+  background-color: var(--side-bar-bg-color);
+  border-bottom: 1px solid var(--menu-divider-color);
+}
+
+.sidebar {
+  background-color: var(--side-bar-bg-color) !important;
+  border-right: 1px solid var(--flexoki-100);
+}
+
+.nav-group-item {
+  color: var(--text-color1) !important;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.nav-group-item:hover,
+.nav-group-item.active {
+  background-color: var(--hover-bg-color1) !important;
+  color: var(--hover-text-color) !important;
+}

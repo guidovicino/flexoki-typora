@@ -1,0 +1,17 @@
+# Example and test files
+Examples/
+THEME-COMPARISON.md
+
+# macOS
+.DS_Store
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
