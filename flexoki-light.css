@@ -1,7 +1,7 @@
 /**
  * Flexoki Light Theme for Typora
  * Based on Flexoki color palette by Steph Ango (https://stephango.com/flexoki)
- * 
+ *
  * A warm, inky color scheme inspired by analog inks and paper
  * Designed for reading and writing on digital screens
  */
@@ -10,7 +10,7 @@
   /* ============================================ */
   /* FLEXOKI COLOR PALETTE - LIGHT MODE         */
   /* ============================================ */
-  
+
   /* Base Colors */
   --flexoki-black: #100F0F;
   --flexoki-paper: #FFFCF0;
@@ -25,7 +25,7 @@
   --flexoki-850: #343331;
   --flexoki-900: #282726;
   --flexoki-950: #1C1B1A;
-  
+
   /* Accent Colors - Light Mode uses 600 variants */
   --flexoki-red: #AF3029;
   --flexoki-orange: #BC5215;
@@ -35,7 +35,7 @@
   --flexoki-blue: #205EA6;
   --flexoki-purple: #5E409D;
   --flexoki-magenta: #A02F6F;
-  
+
   /* Secondary Accent Colors (400 variants for highlights) */
   --flexoki-red-light: #D14D41;
   --flexoki-orange-light: #DA702C;
@@ -45,11 +45,11 @@
   --flexoki-blue-light: #4385BE;
   --flexoki-purple-light: #8B7EC8;
   --flexoki-magenta-light: #CE5D97;
-  
+
   /* ============================================ */
   /* TYPORA THEME VARIABLES                      */
   /* ============================================ */
-  
+
   /* Background Colors */
   --bg-color: var(--flexoki-paper);
   --bg-color1: var(--flexoki-paper);
@@ -57,7 +57,7 @@
   --bg-color3: var(--flexoki-100);
   --bg-color4: var(--flexoki-850);
   --bg-color5: var(--flexoki-50);
-  
+
   /* Text Colors */
   --text-color: var(--flexoki-black);
   --text-color1: var(--flexoki-black);
@@ -65,58 +65,58 @@
   --text-color3: var(--flexoki-300);
   --text-color4: var(--flexoki-paper);
   --text-color5: var(--flexoki-600);
-  
+
   /* UI Colors */
   --link-color: var(--flexoki-cyan);
   --primary-color: var(--flexoki-cyan);
   --primary-btn-border-color: var(--flexoki-200);
   --primary-btn-text-color: var(--flexoki-black);
-  
+
   /* Border Colors */
   --window-border: 1px solid var(--flexoki-100);
   --table-border-color: var(--flexoki-200);
   --table-thead-color: transparent;
   --table-bg-color: transparent;
   --table-bg-darker-color: transparent;
-  
+
   /* Hover Colors */
   --hover-bg-color1: var(--flexoki-100);
   --hover-bg-color2: var(--flexoki-150);
   --hover-bg-color3: var(--flexoki-200);
   --hover-text-color: var(--flexoki-black);
-  
+
   /* Active Colors */
   --active-color: var(--flexoki-200);
   --active-file-bg-color: var(--flexoki-100);
   --active-file-text-color: var(--flexoki-black);
   --active-file-border-color: var(--flexoki-cyan);
-  
+
   /* Input Colors */
   --input-color: var(--flexoki-paper);
   --select-color: var(--flexoki-100);
   --button-color: var(--flexoki-100);
-  
+
   /* Divider Colors */
   --menu-divider-color: var(--flexoki-200);
   --node-border: var(--flexoki-200);
   --node-fill: var(--flexoki-50);
-  
+
   /* Scrollbar Colors */
   --scrollbar-thumb-color: var(--flexoki-300);
   --scrollbar-track-color: transparent;
-  
+
   /* Sidebar Colors */
   --side-bar-bg-color: var(--flexoki-50);
   --control-text-color: var(--flexoki-black);
   --control-text-hover-color: var(--flexoki-black);
   --item-hover-bg-color: var(--flexoki-100);
   --item-hover-text-color: var(--flexoki-black);
-  
+
   /* Focus Colors */
   --focus-color: var(--flexoki-cyan);
   --focus-ring-color: var(--flexoki-cyan-light);
   --blur-text-color: var(--flexoki-300);
-  
+
   /* Code Block Colors */
   --code-bg-color: var(--flexoki-50);
   --code-red-color: var(--flexoki-red);
@@ -130,19 +130,19 @@
   --code-grey-color: var(--flexoki-300);
   --code-select-bg-color: var(--flexoki-200);
   --code-cursor-color: var(--flexoki-cyan);
-  
+
   /* Selection Colors */
   --select-text-bg-color: var(--flexoki-200);
   --search-select-bg-color: var(--flexoki-yellow-light);
-  
+
   /* Misc Colors */
   --rawblock-edit-panel-bd: var(--flexoki-50);
   --theme-select-color: var(--flexoki-cyan-light);
-  
+
   /* ============================================ */
   /* TYPOGRAPHY                                  */
   /* ============================================ */
-  
+
   --sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "system-ui", sans-serif;
   --monospace: "JetBrainsMono Nerd Font", "JetBrains Mono", "Fira Code", Consolas, "Courier New", monospace;
 }
@@ -324,8 +324,8 @@ input[type="checkbox"] {
   top: 0.25em;
   width: 1.1em;
   height: 1.1em;
-  appearance: none;
   -webkit-appearance: none;
+  appearance: none;
   border-radius: 4px;
   border: 2px solid var(--flexoki-black);
   background: transparent;
@@ -856,14 +856,6 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(32, 94, 166, 0.1);
 }
 
-/* Checkbox */
-input[type="checkbox"] {
-  cursor: pointer;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 3px;
-}
-
 /* ============================================ */
 /* SCROLLBAR                                   */
 /* ============================================ */
@@ -992,12 +984,12 @@ input[type="checkbox"] {
     background: white;
     color: black;
   }
-  
+
   #write {
     max-width: 100%;
     padding: 0;
   }
-  
+
   #write h1,
   #write h2,
   #write h3,
@@ -1007,28 +999,28 @@ input[type="checkbox"] {
     color: black;
     page-break-after: avoid;
   }
-  
+
   #write p,
   #write blockquote,
   #write table {
     page-break-inside: avoid;
   }
-  
+
   #write img {
     box-shadow: none;
   }
-  
+
   #write a {
     color: black;
     text-decoration: underline;
   }
-  
+
   #write code,
   #write .md-fences {
     background-color: #f5f5f5;
     box-shadow: none;
   }
-  
+
   /* Remove UI elements */
   .typora-export * {
     -webkit-print-color-adjust: exact;
