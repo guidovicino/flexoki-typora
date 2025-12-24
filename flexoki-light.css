@@ -295,7 +295,7 @@ body {
 }
 
 /* Task Lists */
-.md-task-list-item > input {
+#write .md-task-list-item > input {
   margin-left: -1.5em;
   margin-right: 0.3em;
   transform: translateY(-0.1em);
