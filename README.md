@@ -14,6 +14,7 @@ Flexoki is inspired by analog inks and warm shades of paper, designed for readin
 - **Monospace code** - JetBrainsMono Nerd Font for code blocks
 - **Focus mode support** - Elegant fade effect for non-focused content
 - **Print optimized** - Clean export to PDF
+- **Task lists with custom checkboxes** - Black border when unchecked, cyan background with white SVG checkmark when checked
 
 ## Color Palette
 

@@ -294,10 +294,55 @@ body {
   font-weight: 600;
 }
 
-/* Task Lists */
-#write .md-task-list-item > input {
-  margin-left: -1.5em;
-  margin-right: 0.3em;
+/* ==================== Task Lists / Checkboxes ==================== */
+/* Use native accent-color for all checkboxes (settings, UI panels, etc.) */
+input[type="checkbox"] {
+  accent-color: var(--flexoki-cyan);
+}
+
+/* Task list items - remove default list style */
+#write li.task-list-item,
+#write li.md-task-list-item {
+  list-style: none;
+  position: relative;
+  padding-left: 1.8rem;
+  margin: 0.35rem 0;
+}
+
+/* Task list paragraph - inline display */
+#write li.task-list-item > p,
+#write li.md-task-list-item > p {
+  display: inline;
+  margin: 0;
+}
+
+/* Custom styling for task list checkboxes in document */
+#write li.task-list-item > input[type="checkbox"],
+#write li.md-task-list-item > input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1.1em;
+  height: 1.1em;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 4px;
+  border: 2px solid var(--flexoki-black);
+  background: transparent;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+/* Checked state with SVG checkmark */
+#write li.task-list-item > input[type="checkbox"]:checked,
+#write li.md-task-list-item > input[type="checkbox"]:checked {
+  background-color: var(--flexoki-cyan);
+  border-color: var(--flexoki-cyan);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.5 8.5l3 3 6-6' stroke='%23FFFCF0' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Strikethrough for completed tasks */
@@ -305,54 +350,6 @@ body {
   text-decoration: line-through;
   color: var(--flexoki-600);
   opacity: 0.7;
-}
-
-input[type="checkbox"] {
-  cursor: pointer;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-/* Checkbox unchecked */
-input[type="checkbox"]:not(:checked):before {
-  content: "";
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  vertical-align: middle;
-  border: 2px solid var(--flexoki-300);
-  border-radius: 3px;
-  background-color: var(--bg-color1);
-}
-
-/* Checkbox hover (unchecked) */
-input[type="checkbox"]:not(:checked):hover:before {
-  border-color: var(--flexoki-cyan);
-  background-color: var(--flexoki-50);
-}
-
-/* Checkbox checked */
-input[type="checkbox"]:checked:before {
-  content: "✓";
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1rem;
-  height: 1rem;
-  vertical-align: middle;
-  font-size: 0.75rem;
-  font-weight: 700;
-  border: 2px solid var(--flexoki-cyan);
-  border-radius: 3px;
-  background-color: var(--flexoki-cyan);
-  color: var(--flexoki-paper);
-}
-
-/* Checkbox checked hover */
-input[type="checkbox"]:checked:hover:before {
-  background-color: var(--flexoki-cyan);
-  border-color: var(--flexoki-cyan);
-  opacity: 0.8;
 }
 
 /* ============================================ */

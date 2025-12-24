@@ -90,6 +90,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Always-underlined links** for better accessibility
 - Following official Flexoki syntax highlighting guidelines from Neovim implementation
 
+## [1.0.1] - 2024-12-24
+
+### Fixed
+- **Complete checkbox redesign** for improved reliability and consistency
+  - Task list checkboxes now use inline SVG for the checkmark (more reliable than Unicode character)
+  - Unchecked state: Black border with transparent background
+  - Checked state: Cyan background and border with white SVG checkmark
+  - Settings panel checkboxes: Use native OS rendering with `accent-color` for perfect display
+  - Resolved overflow and alignment issues in both document and UI contexts
+  - Improved positioning with absolute/relative layout for task lists
+
+### Changed
+- Checkbox implementation now follows best practices from Everforest theme
+- Separated styling: native `accent-color` for UI, custom SVG for task lists
+- More specific selectors for better compatibility (`#write li.task-list-item`)
+
 ## [Unreleased]
 
 ### Planned
